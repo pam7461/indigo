@@ -60,8 +60,8 @@
 
       /* content section */
       .content p{text-align:center;}
-      .content h2{margin-bottom:44px;}
       .we_are{margin-bottom:86px;}
+      .we_are h2{margin-bottom:44px;}
       .we_are p{font-size:16px;line-height:30px;}
       .svc_list div{text-align:center;margin-bottom:60px;}
       .svc_list img{margin-bottom:30px;}
@@ -75,10 +75,16 @@
 
     /* 768이상 스타일 */
     @media (min-width:768px){
+      .row{padding:0 50px;}
       /* header section */
       .header{padding:40px 7.083333333333333%;}
       .ham_btn{display:none;}
       .main_nav{display:block;}
+
+      /* content section */
+      .svc_list div{float:left;width:21.63173652694611%;margin-right:4.491017964071856%;}
+      .svc_list div:last-child{margin-right:0;}
+
     }
 
 
@@ -87,6 +93,11 @@
 
     /* 1136이상 스타일 */
     @media (min-width:1136px){
+      .row{padding:0 70px;}
+
+      /* content section */
+      .we_are h2{float:left;}
+      .we_are p{float:right;}
 
     }
 
@@ -151,30 +162,30 @@
     <!-- content section -->
     <section class="section content">
       <div class="row">
-        <article class="article we_are">
+        <article class="article we_are clearfix">
           <h2>WE ARE</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit mollitia nostrum sequi reprehenderit amet distinctio iste eius totam, numquam at, repellendus, tempora dolor? Totam, similique sequi consequatur mollitia doloremque impedit?</p>
         </article>
-        <article class="article svc_list">
+        <article class="article svc_list clearfix">
           <div>
             <img src="images/weare01.png" alt="weare01">
             <h3>HOME</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sapiente laboriosam alias, est fuga illo reiciendis deleniti maxime officia, libero recusandae aliquam quisquam minima optio iure?</p>
+            <p>recusandae aliquam quisquam minima optio iure?</p>
           </div>
           <div>
             <img src="images/weare02.png" alt="weare02">
             <h3>WE ARE</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sapiente laboriosam alias, est fuga illo reiciendis deleniti maxime officia, libero recusandae aliquam quisquam minima optio iure?</p>
+            <p>Lorem libero recusandae aliquam quisquam minima optio iure?</p>
           </div>
           <div>
             <img src="images/weare03.png" alt="weare03">
             <h3>WORK</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sapiente laboriosam alias, est fuga illo reiciendis deleniti maxime officia, libero recusandae aliquam quisquam minima optio iure?</p>
+            <p>sit amet consectetur adipisicing </p>
           </div>
           <div>
             <img src="images/weare04.png" alt="weare04">
             <h3>BLOG</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sapiente laboriosam alias, est fuga illo reiciendis deleniti maxime officia, libero recusandae aliquam quisquam minima optio iure?</p>
+            <p>adipisicing elit. At sapiente laboriosam alias</p>
           </div>
         </article>
       </div>
