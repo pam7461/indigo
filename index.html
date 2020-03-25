@@ -6,6 +6,10 @@
   <title>INDIGO</title>
   <!-- jQuery -->
   <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- Swiper js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
   <!-- CSS Reset -->
   <link rel="stylesheet" href="css/reset.css">
   <!-- User CSS -->
@@ -44,6 +48,11 @@
       .main_nav li{float:left;padding-right:24px;}
       .main_nav li:last-child{padding-right:0;}
       .main_nav li a{font-size:16px;color:#3f51b5;}
+
+      /* banner section */
+      .swiper-pagination{background:transparent;}
+
+      
     }
 
 
@@ -94,6 +103,47 @@
         </ul>
       </nav>
     </header>
+
+    <!--banner section / Swiper -->
+    <section class="swiper-container">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          <a href="#">
+            <img src="images/banner01.jpg" alt="banner01">
+          </a>
+        </li>
+        <li class="swiper-slide">
+          <a href="#">
+            <img src="images/banner02.jpg" alt="banner02">
+          </a>
+        </li>
+        <li class="swiper-slide">
+          <a href="#">
+            <img src="images/banner03.jpg" alt="banner03">
+          </a>
+        </li>
+        <li class="swiper-slide">
+          <a href="#">
+            <img src="images/banner04.jpg" alt="banner04">
+          </a>
+        </li>
+      </ul>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </section>
+    
+
+
+
   </div>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+
 </body>
 </html>
