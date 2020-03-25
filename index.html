@@ -14,9 +14,62 @@
   <link rel="shortcut icon" href="favicon.png">
   <!-- Favicon iOS -->
   <link rel="apple-touch-icon-precomposed" href="favicon.png">
+  <!-- 내부스타일 -->
   <style>
+    /* 스마트워치 */
+    body::after{
+      content:'지원하지 않는 해상도 입니다.';
+      display:block;
+      position:fixed;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      font-size:30px;
+      color:red;
+      }
+    .wrap{display:none;}
+
+    @media (min-width:320px){
+      /* 기본스타일/모바일 스타일 */
+      /* header section */
+      body::after{display:none;}
+      .wrap{display:block;}
+      .header{padding:22px 26px;}
+      .logo{float:left;}
+      .logo a{font-size:26px;color:#3f51b5;}
+      .nav{float:right;margin-top:7px;}
+      .ham_btn li{width:25px;height:2px;margin-bottom:6px;background:#3f51b5;text-indent:-9999px}
+      .ham_btn li:last-child{margin-bottom:0;}
+      .main_nav{display:none;}
+      .main_nav li{float:left;padding-right:24px;}
+      .main_nav li:last-child{padding-right:0;}
+      .main_nav li a{font-size:16px;color:#3f51b5;}
+    }
+
+
+
+    /* 768이상 스타일 */
+    @media (min-width:768px){
+      /* header section */
+      .header{padding:40px 7.083333333333333%;}
+      .ham_btn{display:none;}
+      .main_nav{display:block;}
+    }
+
+
+
+
+
+    /* 1136이상 스타일 */
+    @media (min-width:1136px){
+
+    }
+
+
+
 
   </style>
+  <!-- 내부스크립트 -->
   <script>
 
   </script>
