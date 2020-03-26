@@ -39,7 +39,7 @@
       /* 기본스타일/모바일 스타일 */
       hr{background:#ccc;}
       h1,h2,h3{color:#3f51b5;}
-      h2{font-size:42px;text-align:center;}
+      h2{font-size:42px;text-align:center;padding:60px 0 40px;}
       h3{font-weight:bold;font-size:16px;text-align:center;}
       .row{padding:0 23px;}
       body::after{display:none;}
@@ -72,7 +72,13 @@
       .svc_list p{line-height:24px;}
 
       /* work section */
-      .work li{float:left;width:100%;}
+      .work li{position:relative;float:left;width:100%;}
+      .work li::before{transition:0.3s;content:'';display:block;width:100%;height:100%;position:absolute;left:0;top:0;z-index:100;background:blue;opacity:0;}
+      .work li:hover::before{opacity:0.3;}
+      .work li .work_txt{transition:0.3s;opacity:0;position:absolute;left:10%;top:0%;z-index:101;background:transparent;}
+      .work li:hover .work_txt{opacity:1;top:10%;}
+      .work_txt h3,.work_txt p{color:white;text-align:left;background:transparent;}
+      .work_txt h3{font-size:22px;margin-bottom:10px;}
       .work li img{width:100%;}
     }
 
@@ -215,16 +221,66 @@
     <div class="row"><hr></div>
     
     <section class="section work">
-      <h2>WORK</h2>
+      <div class="row">
+        <h2>WORK</h2>
+      </div>
       <ul class="clearfix">
-        <li><img src="images/work01.jpg" alt="work01"></li>
-        <li><img src="images/work02.jpg" alt="work02"></li>
-        <li><img src="images/work03.jpg" alt="work03"></li>
-        <li><img src="images/work04.jpg" alt="work04"></li>
-        <li><img src="images/work05.jpg" alt="work05"></li>
-        <li><img src="images/work06.jpg" alt="work06"></li>
-        <li><img src="images/work07.jpg" alt="work07"></li>
-        <li><img src="images/work08.jpg" alt="work08"></li>
+        <li>
+          <img src="images/work01.jpg" alt="work01">
+          <div class="work_txt">
+            <h3>Running</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/work02.jpg" alt="work02">
+          <div class="work_txt">
+            <h3>Rugby</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/work03.jpg" alt="work03">
+          <div class="work_txt">
+            <h3>Weight</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/work04.jpg" alt="work04">
+          <div class="work_txt">
+            <h3>Marathon</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/work05.jpg" alt="work05">
+          <div class="work_txt">
+            <h3>Boxing</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/work06.jpg" alt="work06">
+          <div class="work_txt">
+            <h3>Ice Hockey</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/work07.jpg" alt="work07">
+          <div class="work_txt">
+            <h3>Skate board</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/work08.jpg" alt="work08">
+          <div class="work_txt">
+            <h3>Basketball</h3>
+            <p>WEB/PRINT</p>
+          </div>
+        </li>
       </ul>
     </section>
 
