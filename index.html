@@ -50,12 +50,14 @@
       .logo{float:left;}
       .logo a{font-size:26px;color:#3f51b5;}
       .nav{float:right;margin-top:7px;}
+      .ham_btn{cursor: pointer;}
       .ham_btn li{width:25px;height:2px;margin-bottom:6px;background:#3f51b5;text-indent:-9999px}
       .ham_btn li:last-child{margin-bottom:0;}
+      .main_nav{position:absolute;left:0;top:76px;z-index:99999;width:100%;background:#3f51b5}
+      .main_nav li{float:left;width:100%;border-bottom:1px solid rgba(255,255,255,0.6);padding:10px 20px;background:#3f51b5;}
+      .main_nav li:last-child{border-bottom:none;}
+      .main_nav li a{font-size:20px;background:#3f51b5;color:white;}
       .main_nav{display:none;}
-      .main_nav li{float:left;padding-right:24px;}
-      .main_nav li:last-child{padding-right:0;}
-      .main_nav li a{font-size:16px;color:#3f51b5;}
 
       /* banner section */
       .banner{margin-bottom:78px;}
@@ -72,7 +74,7 @@
       .svc_list p{line-height:24px;}
 
       /* work section */
-      .work li{position:relative;float:left;width:100%;}
+      .work li{position:relative;float:left;width:100%;cursor: pointer;}
       .work li::before{transition:0.3s;content:'';display:block;width:100%;height:100%;position:absolute;left:0;top:0;z-index:100;background:blue;opacity:0;}
       .work li:hover::before{opacity:0.3;}
       .work li .work_txt{transition:0.3s;opacity:0;position:absolute;left:10%;top:0%;z-index:101;background:transparent;}
@@ -80,6 +82,10 @@
       .work_txt h3,.work_txt p{color:white;text-align:left;background:transparent;}
       .work_txt h3{font-size:22px;margin-bottom:10px;}
       .work li img{width:100%;}
+
+      /* line02 */
+      .line02{width:20px;height:2px;margin:80px auto;background:#3f51b5;}
+
     }
 
 
@@ -89,9 +95,14 @@
       .row{padding:0 50px;}
       /* header section */
       .header{padding:40px 7.083333333333333%;}
+      .nav{margin-top:-7px;}
       .ham_btn{display:none;}
       .main_nav{display:block;}
-
+      .main_nav{position:static;background:white;}
+      .main_nav li{width:auto;border-bottom:none;padding-right:24px;background:white;}
+      .main_nav li:last-child{padding-right:0;}
+      .main_nav li a{font-size:16px;background:white;color:#3f51b5;}
+      
       /* content section */
       .svc_list div{float:left;width:21.63173652694611%;margin-right:4.491017964071856%;}
       .svc_list div:last-child{margin-right:0;}
@@ -220,6 +231,7 @@
     <!-- line -->
     <div class="row"><hr></div>
     
+    <!-- work section -->
     <section class="section work">
       <div class="row">
         <h2>WORK</h2>
@@ -284,6 +296,8 @@
       </ul>
     </section>
 
+    <!-- line2 -->
+    <div class="row"><hr class="line02"></div>
   </div>
 
   <script>
@@ -291,6 +305,11 @@
       pagination: {
         el: '.swiper-pagination',
       },
+    });
+    jQuery(function($){
+      $(".ham_btn").click(function(){
+        $(".main_nav").slideToggle();
+      });
     });
   </script>
 
