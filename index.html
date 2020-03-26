@@ -20,7 +20,8 @@
   <link rel="apple-touch-icon-precomposed" href="favicon.png">
   <!-- 내부스타일 -->
   <style>
-    /* 스마트워치 */
+    /* 320미만 */
+    .wrap{max-width:1920px;margin:0 auto;}
     body::after{
       content:'지원하지 않는 해상도 입니다.';
       display:block;
@@ -33,16 +34,18 @@
       }
     .wrap{display:none;}
 
+    /* 320이상 스타일 */
     @media (min-width:320px){
       /* 기본스타일/모바일 스타일 */
-      /* header section */
+      hr{background:#ccc;}
       h1,h2,h3{color:#3f51b5;}
       h2{font-size:42px;text-align:center;}
       h3{font-weight:bold;font-size:16px;text-align:center;}
       .row{padding:0 23px;}
-
       body::after{display:none;}
       .wrap{display:block;}
+
+       /* header section */
       .header{padding:22px 26px;}
       .logo{float:left;}
       .logo a{font-size:26px;color:#3f51b5;}
@@ -68,7 +71,9 @@
       .svc_list h3{margin-bottom:26px;}
       .svc_list p{line-height:24px;}
 
-
+      /* work section */
+      .work li{float:left;width:100%;}
+      .work li img{width:100%;}
     }
 
 
@@ -85,6 +90,10 @@
       .svc_list div{float:left;width:21.63173652694611%;margin-right:4.491017964071856%;}
       .svc_list div:last-child{margin-right:0;}
 
+      /* work section */
+      .work li{width:50%;}
+
+
     }
 
 
@@ -94,15 +103,26 @@
     /* 1136이상 스타일 */
     @media (min-width:1136px){
       .row{padding:0 70px;}
+      h2{text-align:left;}
+      
 
       /* content section */
-      .we_are h2{float:left;}
-      .we_are p{float:right;}
+      .content p{text-align:left;}
+      .we_are h2{float:left;width:41.66666666666667%;}
+      .we_are p{position:relative;float:right;width:58.33333333333333%;}
+      .we_are p::before{position:absolute;left:-18px;top:10px;content:'';display:inline-block;width:2px;height:100px;background:#ccc;}
+
+      /* work section */
+      .work li{width:25%;}
 
     }
 
 
 
+    /* 1287이상 스타일 */
+    @media (min-width:1287px){
+      .we_are p::before{height:72px;}
+    }
 
   </style>
   <!-- 내부스크립트 -->
@@ -191,7 +211,22 @@
       </div>
     </section>
 
-
+    <!-- line -->
+    <div class="row"><hr></div>
+    
+    <section class="section work">
+      <h2>WORK</h2>
+      <ul class="clearfix">
+        <li><img src="images/work01.jpg" alt="work01"></li>
+        <li><img src="images/work02.jpg" alt="work02"></li>
+        <li><img src="images/work03.jpg" alt="work03"></li>
+        <li><img src="images/work04.jpg" alt="work04"></li>
+        <li><img src="images/work05.jpg" alt="work05"></li>
+        <li><img src="images/work06.jpg" alt="work06"></li>
+        <li><img src="images/work07.jpg" alt="work07"></li>
+        <li><img src="images/work08.jpg" alt="work08"></li>
+      </ul>
+    </section>
 
   </div>
 
