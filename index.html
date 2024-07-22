@@ -12,7 +12,6 @@
             overflow:hidden;
             height:1000px;
         }
-
         .header{
             padding:16px 0;
             position:relative;
@@ -41,6 +40,7 @@
             background:#3f51b5;
         }
         .header nav{
+            display:none;
             position:absolute;
             left:0;
             right:0;
@@ -103,7 +103,7 @@
                 display:none;
             }
             .header nav{
-                display:block;
+                display:block !important;
                 position:static;
                 background:transparent;
                 color:#3f51b5;
@@ -130,12 +130,12 @@
         <header class="header">
             <div class="container">
                 <h1><a href="#">INDIGO</a></h1>
-                <div class="btn-nav">
+                <div class="btn-nav" id="btn-nav">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <nav>
+                <nav id="nav">
                     <ul>
                         <li><a href="#">home</a></li>
                         <li><a href="#">we are</a></li>
@@ -172,5 +172,10 @@
         </footer>
     </section>
     <script src="./js/jquery.min.js"></script>
+    <script>
+        $('#btn-nav').click(function(){
+            $('#nav').slideToggle();
+        })
+    </script>
 </body>
 </html>
