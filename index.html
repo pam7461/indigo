@@ -58,14 +58,34 @@
             border-bottom:1px solid rgba(0,0,0,0.5);
             padding:1em 2em;
         }
+        .slider{
+            margin-bottom:96px;
+        }
+        .display{
+            margin-bottom:96px;
+        }
+        .display .container{
+            max-width:1132px;
+            margin:0 auto;
+            padding:0 3.333333333333333%;
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .display  h2{
+            width:100%;
+            margin-bottom:36px;
+            font-size:3em;
+            color:#3f51b5;
+            text-align:center;
+            text-transform:uppercase;
+        }
+        .display  p{
+            width:100%;
+            color:#333;
+            line-height:2;
+            text-align:center;
+        }
 
-
-
-        .slider{}
-
-
-
-        .display{}
 
 
 
@@ -114,12 +134,26 @@
                 border-bottom:none;
                 padding:0;
             }
+            .slider{
+                margin-bottom:120px;
+            }
+            .display{
+                margin-bottom:120px;
+            }
         }
 
 
         /* 데스크탑 */
         @media (min-width:1132px){
-
+            .display  h2{
+                width:43%;
+                text-align:left;
+            }
+            .display  p{
+                width:57%;
+                padding-left:20px;
+                text-align:left;
+            }
         }
 
 
@@ -147,10 +181,18 @@
             </div>
         </header>
         <section class="sec sec01 slider">
-            <div class="container"></div>
+            <div class="container">
+                <div class="img-box"><a href="#"><img src="./images/slide01.jpg" alt="slide01"></a></div>
+            </div>
         </section>
         <section class="sec sec02 display">
-            <div class="container"></div>
+            <div class="container">
+                <h2>we are</h2>
+                <p>
+                    Contrary to popular Lorem Ipsum is not simply random text. It has roots in a<br>
+                    piece of classical literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
         </section>
         <section class="sec sec03 promotion">
             <div class="container"></div>
