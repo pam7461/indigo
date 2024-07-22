@@ -57,10 +57,7 @@
             border-bottom:1px solid rgba(0,0,0,0.5);
             padding:1em 2em;
         }
-        .slider{
-            margin-bottom:96px;
-        }
-        .display{
+        .sec{
             margin-bottom:96px;
         }
         .display .container{
@@ -95,19 +92,46 @@
             line-height:2;
             text-align:center;
         }
+        /* .promotion{} */
+        .promotion .container{
+            max-width:1132px;
+            margin:0 auto;
+            padding:0 3.333333333333333%;
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .promotion h2{
+            display:none;
+        }
+        .promotion .art{
+            width:100%;
+        }
+        /* .work{} */
+        .work .container{
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .work h2{
+            width:100%;
+        }
+        .work .art{
+            width:100%;
+        }
 
-
-
-
-        .promotion{}
-
-
-
-        .work{}
-
-
-
-        .blog{}
+        /* .blog{} */
+        .blog .container{
+            max-width:1132px;
+            margin:0 auto;
+            padding:0 3.333333333333333%;
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .blog h2{
+            width:100%;
+        }
+        .blog .art{
+            width:100%;
+        }
 
 
 
@@ -144,11 +168,23 @@
                 border-bottom:none;
                 padding:0;
             }
-            .slider{
+            .sec{
                 margin-bottom:120px;
             }
-            .display{
-                margin-bottom:120px;
+            .promotion .art{
+                width:auto;
+                flex:1;
+            }
+            .work .art{
+                width:50%;
+            }
+            .blog .art{
+                width:auto;
+                flex:1;
+                margin-right:20px;
+            }
+            .blog .art:last-child{
+                margin-right:0;
             }
         }
 
@@ -166,6 +202,14 @@
                 width:57%;
                 padding-left:20px;
                 text-align:left;
+            }
+            .work .art{
+                width:25%;
+            }
+            .blog h2{
+                width:auto;
+                flex:1;
+                margin-right:20px;
             }
         }
 
