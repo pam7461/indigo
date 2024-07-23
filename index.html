@@ -289,10 +289,17 @@
             text-transform:uppercase;
             text-align:center;
         }
-
-
-        .map{}
-
+        /* .map{} */
+        .map{
+            margin-bottom:0;
+        }
+        .map h2{
+            display:none;
+        }
+        .map iframe{
+            height:360px;
+            border:none;
+        }
 
 
         .footer{}
@@ -354,7 +361,13 @@
             }
             .contact input,.contact textarea{
                 width:calc(50% - 10px);                
-            }          
+            } 
+            .map{
+                margin-bottom:0;
+            } 
+            .map iframe{
+                height:450px;
+            }        
         }
 
 
@@ -571,6 +584,7 @@
         <section class="sec sec07 map">
             <div class="container">
                 <h2>map</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4470.798743989943!2d126.67551428856301!3d37.5943421204592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1721703674128!5m2!1sko!2skr"></iframe>
             </div>
         </section>
         <footer class="footer">
