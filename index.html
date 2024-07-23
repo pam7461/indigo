@@ -14,9 +14,15 @@
         .wrapper{
             overflow:hidden;
         }
-        .header{
+        .header{            
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            z-index:1000;
+            border-bottom:1px solid #eee;
             padding:16px 0;
-            position:relative;
+            background:#fff;
         }
         .header .container{
             padding:0 3.333333333333333%;
@@ -60,9 +66,12 @@
             border-bottom:1px solid rgba(0,0,0,0.5);
             padding:1em 2em;
         }
+        .slider{
+            padding-top:71px;
+        }
         .sec{
             margin-bottom:96px;
-        }
+        }        
         .display .container{
             max-width:1132px;
             margin:0 auto;
@@ -303,6 +312,26 @@
             height:360px;
             border:none;
         }
+        .aside{
+            position:fixed;
+            right:1em;
+            bottom:100px;
+            opacity:0.1;
+            transition:opacity 0.3s;
+        }
+        .aside:hover{
+            opacity:1; 
+        }
+        .aside a{
+            display:block;
+            width:42px;
+            height:42px;
+            border-radius:21px;
+            background:#000;
+            text-align:center;
+            line-height:42px;
+            color:#fff;
+        }
         .footer{
             padding:1em 0;
             font-size:1.2em;
@@ -315,6 +344,7 @@
         @media (min-width:768px){
             .header{
                 padding:24px 0;
+                position:static;
             }
             .header .container{
                 padding:0 50px;
@@ -333,6 +363,9 @@
                 margin-left:2em;
                 border-bottom:none;
                 padding:0;
+            }
+            .slider{
+                padding-top:0;
             }
             .sec{
                 margin-bottom:120px;
@@ -374,7 +407,10 @@
             } 
             .map iframe{
                 height:450px;
-            }   
+            }  
+            .aside{
+                display:none;
+            } 
             .footer{
                 padding:1.5em 0;
             }     
@@ -443,7 +479,7 @@
                 </nav>
             </div>
         </header>
-        <section class="sec sec01 slider">
+        <section class="sec sec01 slider" id="slider">
             <div class="container">
                 <div class="img-box"><a href="#"><img src="./images/slide01.jpg" alt="slide01"></a></div>
             </div>
@@ -597,6 +633,9 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4470.798743989943!2d126.67551428856301!3d37.5943421204592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1721703674128!5m2!1sko!2skr"></iframe>
             </div>
         </section>
+        <aside class="aside">
+            <a href="#slider">Top</a>
+        </aside>
         <footer class="footer">
             <div class="container">
                 <a href="./index.html">indigo</a>
