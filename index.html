@@ -160,13 +160,28 @@
             width:100%;
             position:relative;
         }
-        .work .art h3{
-            display:none;
+        .work .art h3{            
+            position:absolute;
+            left:24px;
+            top:0;
+            font-weight:500;
+            font-size:1.4em;
+            color:#fff;
+            text-transform:capitalize;
+            opacity:0;
+            transition:all 0.3s;
         }
         .work .art p{
-            display:none;
+            position:absolute;
+            left:24px;
+            top:32px;
+            font-size:0.8em;
+            color:#fff;
+            text-transform:uppercase;
+            opacity:0;
+            transition:all 0.3s;
         }
-        .work .art::after{
+        .work .art::before{
             content:'';
             display:block;
             position:absolute;
@@ -174,11 +189,28 @@
             right:0;
             top:0;
             bottom:0;
-            background:rgba(63,81,181,0);
-            transition:background 0.3s;
+            background:#3f51b5;
+            opacity:0;
+            transition:opacity 0.3s;
+        }        
+        .work .art:hover::before{
+            opacity:0.8;
         }
-        .work .art:hover::after{
-            background:rgba(63,81,181,0.7);
+        .work .art:hover h3{
+            top:24px;
+            opacity:1;
+        }
+        .work .art:hover p{
+            top:56px;
+            opacity:1;
+        }
+
+        /* mini-hr */
+        .mini-hr{
+            width:24px;
+            height:2px;            
+            margin:0 auto 96px;
+            background:#3f51b5;
         }
 
         /* .blog{} */
@@ -191,11 +223,25 @@
         }
         .blog h2{
             width:100%;
+            margin-bottom:36px;
+            font-size:3em;
+            color:#3f51b5;
+            text-align:center;
+            text-transform:uppercase;
         }
         .blog .art{
             width:100%;
+            margin-bottom:36px;
         }
-
+        .blog .art:last-child{
+            margin-bottom:0;
+        }
+        .blog .art h3{
+            margin:1em 0 0.3em;
+            font-size:0.8em;
+            color:#ccc;
+            text-transform:uppercase; 
+        }
 
 
         .contact{}
@@ -253,10 +299,11 @@
                 width:auto;
                 flex:1;
                 margin-right:20px;
+                margin-bottom:0;
             }
             .blog .art:last-child{
                 margin-right:0;
-            }
+            }            
         }
 
 
@@ -281,6 +328,7 @@
                 width:auto;
                 flex:1;
                 margin-right:20px;
+                text-align:left;
             }
             .work h2{
                 text-align:left;
@@ -420,6 +468,7 @@
                 </article>
             </div>
         </section>
+        <div class="mini-hr"></div>
         <section class="sec sec05 blog" id="blog">
             <div class="container">
                 <h2>blog</h2>
