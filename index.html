@@ -264,6 +264,30 @@
             width:100%;
             display:flex;
             flex-flow:column nowrap;
+            align-items:flex-end;
+        }
+        .contact input,.contact textarea{
+            width:100%;
+            margin-bottom:24px;
+            border:none;
+            border-bottom:1px solid #999;
+            padding:1em 0;            
+        }
+        .contact textarea{
+            height:176px;
+        }
+        .contact ::placeholder{
+            color:#3f51b5;
+            text-transform:capitalize;
+        }
+        .contact input[type="submit"]{
+            width:130px;
+            margin-bottom:0;
+            border:none;
+            background:#3f51b5;
+            color:#fff;
+            text-transform:uppercase;
+            text-align:center;
         }
 
 
@@ -325,7 +349,11 @@
             }  
             .contact form{
                 flex-wrap:wrap;
-                /* height:60px; */
+                align-content:space-between;
+                height:242px;
+            }
+            .contact input,.contact textarea{
+                width:calc(50% - 10px);                
             }          
         }
 
