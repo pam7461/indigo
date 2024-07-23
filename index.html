@@ -244,8 +244,27 @@
         }
 
 
-        .contact{}
-
+        /* .contact{} */
+        .contact .container{
+            max-width:1132px;
+            margin:0 auto;
+            padding:0 3.333333333333333%;
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .contact h2{
+            width:100%;
+            margin-bottom:36px;
+            font-size:3em;
+            color:#3f51b5;
+            text-align:center;
+            text-transform:uppercase;
+        }
+        .contact form{
+            width:100%;
+            display:flex;
+            flex-flow:column nowrap;
+        }
 
 
         .map{}
@@ -303,7 +322,11 @@
             }
             .blog .art:last-child{
                 margin-right:0;
-            }            
+            }  
+            .contact form{
+                flex-wrap:wrap;
+                /* height:60px; */
+            }          
         }
 
 
@@ -324,14 +347,24 @@
             .work .art{
                 width:25%;
             }
+            .work h2{
+                text-align:left;
+            }
             .blog h2{
                 width:auto;
                 flex:1;
                 margin-right:20px;
                 text-align:left;
             }
-            .work h2{
+            .contact h2{
+                width:auto;
+                flex:1;
+                margin-right:20px;
                 text-align:left;
+            }
+            .contact form{
+                width:auto;
+                flex:3;
             }
         }
 
@@ -498,6 +531,13 @@
         <section class="sec sec06 contact" id="contact">
             <div class="container">
                 <h2>contact</h2>
+                <form action="#">
+                    <input type="text" placeholder="name">
+                    <input type="text" placeholder="phone">
+                    <input type="email" placeholder="email">
+                    <textarea placeholder="message"></textarea>
+                    <input type="submit" value="send message">
+                </form>
             </div>
         </section>
         <section class="sec sec07 map">
