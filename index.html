@@ -300,9 +300,13 @@
             height:360px;
             border:none;
         }
-
-
-        .footer{}
+        .footer{
+            padding:1em 0;
+            font-size:1.2em;
+            color:#3f51b5;
+            text-align:center;
+            text-transform:uppercase;
+        }
 
         /* 테블릿 */
         @media (min-width:768px){
@@ -367,7 +371,10 @@
             } 
             .map iframe{
                 height:450px;
-            }        
+            }   
+            .footer{
+                padding:1.5em 0;
+            }     
         }
 
 
@@ -588,7 +595,9 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="container"></div>
+            <div class="container">
+                <a href="./index.html">indigo</a>
+            </div>
         </footer>
     </section>
     <script src="./js/jquery.min.js"></script>
